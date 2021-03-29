@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class main {
 
     public static void main(String[] args){
@@ -126,7 +128,7 @@ public class main {
 
         //TYPECASTING
 
-        System.out.println("\r TYPECASTING \n");
+        System.out.println("\n \nTYPECASTING \n");
 
             //Wide Casting
             // byte -> short - > char -> int -> long -> float -> double
@@ -144,6 +146,93 @@ public class main {
 
         System.out.print(newDouble + " ");
         System.out.print(newShort + " \n");
+
+        //CONDITIONAL STATEMENT
+
+        if(20 > 18 ){
+            System.out.println("20 is greatr than 18");
+        }else if (5 > 2 ){
+
+            //conditions here
+
+        } else {
+
+        }
+
+        int time = 18;
+
+        String resultA = (time < 18 ) ? "Good day." : "Good evening.";
+                System.out.println(resultA);
+
+
+        // SWITCH / IF
+
+        int day = 0;
+        int method = 0;
+        String weekDay = "Default";
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Please input a number from 1 ~ 7 :");
+        day = sc.nextInt();
+
+            if (day == 1)
+                weekDay = "Monday";
+            if (day == 2)
+                weekDay = "Tuesday";
+            if (day == 3)
+                weekDay = "Wednesday";
+            if (day == 4)
+                weekDay = "Thursday";
+            if (day == 5)
+                weekDay = "Friday";
+            if (day == 6)
+                weekDay = "Saturday";
+            if (day == 7)
+                weekDay = "Sunday";
+
+        switch(day){
+            case 1:
+                weekDay = "Is Monday";
+            case 2:
+                weekDay = "Is Tuesday";
+            case 3:
+                weekDay = "Is Wednesday";
+            case 4:
+                weekDay = "Is Thursday";
+            case 5:
+                weekDay = "Is Friday";
+            case 6:
+                weekDay = "Is Saturday";
+            case 7:
+                weekDay = "Is Sunday";
+            }
+
+        System.out.println("Corresponding Day for the number: " + weekDay);
+
+        //WHILE LOOP EXERCISE
+
+        int ranNum = 1;
+
+        while( ranNum <= 6){
+
+            System.out.print("[" + ranNum + "]" + " ");
+            ranNum++;
+
+        }
+
+        int addNum = 0;
+        int newNum = 0;
+        int maxNum = 0;
+
+        System.out.println("\n Please input a number: ");
+        maxNum = sc.nextInt();
+
+        while(addNum < maxNum){
+
+            newNum = newNum + addNum++;
+            System.out.print(" " + newNum + " ");
+
+        }
     }
 
 }
