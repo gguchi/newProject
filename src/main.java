@@ -253,6 +253,34 @@ public class main {
             System.out.print(" " + newNum + " ");
 
         }
+
+        //DO WHILE EXERCISE
+
+        int evenNum = 1;
+        int counter = 1;
+        int dwCount = 0;
+
+        System.out.println("Please input a new number: ");
+        dwCount = sc.nextInt();
+
+        do{
+
+            if(counter % 2 == 0) {
+                System.out.println(" " + counter + " ");
+                evenNum++;
+            }
+
+            counter++;
+
+            /*
+            evenNum = counter * 2;
+            System.out.print(" " + evenNum + " ");
+            counter++;
+            */
+
+        } while (evenNum <= dwCount);
+
+
     }
 
 }
