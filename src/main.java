@@ -172,8 +172,14 @@ public class main {
         String weekDay = "Default";
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Please input a number from 1 ~ 7 :");
-        day = sc.nextInt();
+        System.out.println("Press 1 for IF method | Press 2 for SWITCH method :");
+        method = sc.nextInt();
+
+
+        if( method == 1) {
+
+            System.out.println("Please input a number from 1 ~ 7 :");
+            day = sc.nextInt();
 
             if (day == 1)
                 weekDay = "Monday";
@@ -189,23 +195,37 @@ public class main {
                 weekDay = "Saturday";
             if (day == 7)
                 weekDay = "Sunday";
+        }
 
-        switch(day){
-            case 1:
-                weekDay = "Is Monday";
-            case 2:
-                weekDay = "Is Tuesday";
-            case 3:
-                weekDay = "Is Wednesday";
-            case 4:
-                weekDay = "Is Thursday";
-            case 5:
-                weekDay = "Is Friday";
-            case 6:
-                weekDay = "Is Saturday";
-            case 7:
-                weekDay = "Is Sunday";
+        if(method == 2) {
+
+            System.out.println("Please input a number from 1 ~ 7 :");
+            day = sc.nextInt();
+
+            switch (day) {
+                case 1:
+                    weekDay = "Is Monday";
+                    break;
+                case 2:
+                    weekDay = "Is Tuesday";
+                    break;
+                case 3:
+                    weekDay = "Is Wednesday";
+                    break;
+                case 4:
+                    weekDay = "Is Thursday";
+                    break;
+                case 5:
+                    weekDay = "Is Friday";
+                    break;
+                case 6:
+                    weekDay = "Is Saturday";
+                    break;
+                case 7:
+                    weekDay = "Is Sunday";
+                    break;
             }
+        }
 
         System.out.println("Corresponding Day for the number: " + weekDay);
 
@@ -227,7 +247,7 @@ public class main {
         System.out.println("\n Please input a number: ");
         maxNum = sc.nextInt();
 
-        while(addNum < maxNum){
+        while(addNum <= maxNum){
 
             newNum = newNum + addNum++;
             System.out.print(" " + newNum + " ");
