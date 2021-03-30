@@ -260,25 +260,37 @@ public class main {
         int counter = 1;
         int dwCount = 0;
 
-        System.out.println("Please input a new number: ");
+        System.out.println("\n Please input a new number: ");
         dwCount = sc.nextInt();
 
         do{
 
             if(counter % 2 == 0) {
-                System.out.println(" " + counter + " ");
+                System.out.print(" " + counter + " ");
                 evenNum++;
             }
 
             counter++;
 
-            /*
-            evenNum = counter * 2;
-            System.out.print(" " + evenNum + " ");
-            counter++;
-            */
-
         } while (evenNum <= dwCount);
+
+        //FIBONACCI SEQUENCE
+
+        int fiboX = 0;
+        int fiboY = 1;
+        int fiboZ = 0;
+        int fiboN;
+
+        System.out.println("\n Fibonacci count: ");
+        fiboZ = sc.nextInt();
+
+        for(fiboN = 1; fiboN <= fiboZ; fiboN++){ // count: 1 2 3
+
+            System.out.print(" "+ fiboX + " "); //
+            int fiboSum = fiboX + fiboY;
+                    fiboX = fiboY;
+                    fiboY = fiboSum;
+        }
 
 
     }
