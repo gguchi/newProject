@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class main {
 
     public static void main(String[] args){
+        String fname = "";
+
         //Primitive
         byte numberLessThanZero;
         int wholeNumbers = 122;
@@ -12,11 +14,18 @@ public class main {
         boolean isTrueorFalse = true;
         char singleCharacter = '\u0041';
 
+
         /*double doubleNumber;
         int i = 23;
         doubleNumber = i;*/
 
         //Print all primitive type, output and run
+        /*
+        myMethod(fname, "Wendy");
+        myMethod(fname, "Irene");
+        myMethod(fname, "Seulgi");
+        */
+
         System.out.println("PRINTING PRIMITIVE VARIABLE TYPES \n");
 
         System.out.print("Int Value: " + wholeNumbers + " || ");
@@ -29,6 +38,14 @@ public class main {
         //Non primitive
 
         //for loop
+
+        Scanner sen = new Scanner(System.in);
+        String newSen = "Test sentence";
+
+        System.out.println("Type a sentence: ");
+        //newSen = sen.nextLine();
+        wordCount(newSen);
+        vowelCount(newSen);
 
         System.out.println("LOOPS \n");
 
@@ -292,6 +309,56 @@ public class main {
                     fiboY = fiboSum;
         }
 
+        //ARRAYS
+
+        System.out.println("\r");
+
+        String[] names = {"Wendy", "Irene", "Seulgi", "Yeri", "Joy"};
+
+        for(String h: names)
+            System.out.print(" " + h);
+
+        //ACTIVITY ARRAY
+        System.out.println("\r");
+
+        int[] arraySum = {10, 3, 5, -20, 0, 23};
+
+        int sum=0;
+
+        for(int total: arraySum)
+            sum = sum + total;
+
+        System.out.println(sum);
+
+    }
+
+    static void myMethod(String fname){
+
+        System.out.println(fname+ "test");
+
+    }
+
+    static int wordCount(String myString){
+
+        int wordNumber=0;
+        int x;
+
+        for(x = 0; x < myString.length(); x++){
+
+            myString.indexOf(" ");
+            
+        }
+
+        return wordNumber;
+
+    }
+
+    static int vowelCount(String myString){
+
+        int vowelCount = 0;
+
+
+        return vowelCount;
 
     }
 
